@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Directory</title>
+
+    <!-- will load boostrap CSS styles -->
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet">
+</head>
+<body>
+<br><br>
+<div class="container">
+
+    <h3>Employee Directory</h3>
+    <hr>
+
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <!-- loop over the list of employees and tempEmployee is the temporary loop variable -->
+        <tr th:each="tempEmployee : ${employees}">
+            <td th:text="${tempEmployee.firstName}"></td>
+            <td th:text="${tempEmployee.lastName}"></td>
+            <td th:text="${tempEmployee.email}"></td>
+
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
